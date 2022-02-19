@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClickPC Backend</name>
+    </assembly>
+    <members>
+        <member name="M:ClickPC_Backend.Controllers.AccountsController.GetAccounts">
+            <summary>
+            Rota para obter todas contas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.AccountsController.GetAccount(System.String)">
+            <summary>
+            Rota para obter uma conta pelo id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.AccountsController.PutAccount(System.String,ClickPC_Backend.Models.Account)">
+            <summary>
+            Rota para atualizar uma conta
+            </summary>
+            <param name="id"></param>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.AccountsController.PostAccount(ClickPC_Backend.Models.Account)">
+            <summary>
+            Rota para adicionar uma conta
+            </summary>
+            <param name="account"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.AccountsController.DeleteAccount(System.String)">
+            <summary>
+            Rota para eliminar uma conta
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.CustomersController.GetCustomers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.CustomersController.GetCustomer(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.CustomersController.PutCustomer(System.String,ClickPC_Backend.Models.Customer)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.CustomersController.PostCustomer(ClickPC_Backend.Models.Customer)">
+            <summary>
+            
+            </summary>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.CustomersController.DeleteCustomer(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetValorTotalDasVendas_Ano(System.String)">
+            <summary>
+            Devolve o valor total de vendas de um determinado ano
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetTotalDasVendasPorMes_Ano(System.String)">
+            <summary>
+            Devolve uma lista de Meses, com o mês e o valor total de vendas desse mesmo mês
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetFaturasDoTotalDeVendasPorAno_Mes(System.String,System.Int32)">
+            <summary>
+            Devolve uma lista de Faturas, com o id da fatura, o id do documento, o id e nome do cliente da fatura e o valor dessa mesma fatura
+            </summary>
+            <param name="ano"></param>
+            <param name="mes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetTopClientes_Ano(System.String)">
+            <summary>
+            Devolve uma lista de Clientes, com o nome, id e valor total de compras desse cliente nesse ano
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetFaturaDoCliente_Nome_Ano(System.String,System.String)">
+            <summary>
+            Devolve uma lista de Faturas, com o id da fatura, a data da fatura, o id e nome do cliente e o valor dessa fatura
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetValorTotalDasDespesas_Ano(System.String)">
+            <summary>
+            Devolve o valor total de despesas de um ano
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetValorTotalDasDespesasPorMes_Ano(System.String)">
+            <summary>
+            Devolve uma lista de Meses, com o mês e o valor total de despesas desse mês
+            </summary>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetFaturasDoTotalDeDespesas_Ano_Mes(System.String,System.Int32)">
+            <summary>
+            Devolve uma lista de Faturas, com o id da fatura, o id do documento e o valor dessa fatura
+            </summary>
+            <param name="ano"></param>
+            <param name="mes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetTop5ProductosVendidos_Ano(System.String)">
+            <summary>
+            Devolve uma lista de Produtos, com nome e quantidade vendida, dos 5 Produtos mais vendidos desse ano
+            </summary>
+            <param name="ano"></param>  
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.GetTop5ProductosVendidos_Ano_Mes(System.String,System.Int32)">
+            <summary>
+            Devolve uma lista de Produtos, com nome e quantidade vendida, dos 5 Produtos mais vendidos desse ano e nesse mes
+            </summary>
+            <param name="ano"></param>
+            <param name="mes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.FrontendController.SetFile(System.String)">
+            <summary>
+            Recebe o caminho para o ficheiro SAF-T que se pretende ler e lê o ficheiro, alterando os dados da base dados
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.InvoicesController.GetInvoices">
+            <summary>
+            Rota para buscar todas as faturas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.InvoicesController.GetInvoice(System.String)">
+            <summary>
+            Rota para buscar uma fatura através do seu id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.InvoicesController.PutInvoice(System.String,ClickPC_Backend.Models.Invoice)">
+            <summary>
+            Rota para atualizar uma fatura (apesar de nao fazer muito sentido)
+            </summary>
+            <param name="id"></param>
+            <param name="invoice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.InvoicesController.PostInvoice(ClickPC_Backend.Models.Invoice)">
+            <summary>
+            Rota para adicionar uma fatura
+            </summary>
+            <param name="invoice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.InvoicesController.DeleteInvoice(System.String)">
+            <summary>
+            Rota para eliminar uma fatura (apesar de nao fazer muito sentido)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.LinesInvoicesController.GetInvoiceLines">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.LinesInvoicesController.GetInvoiceLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.LinesInvoicesController.PutInvoiceLine(System.String,ClickPC_Backend.Models.LineInvoice)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="invoiceLine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.LinesInvoicesController.PostInvoiceLine(ClickPC_Backend.Models.LineInvoice)">
+            <summary>
+            
+            </summary>
+            <param name="invoiceLine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.LinesInvoicesController.DeleteInvoiceLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.ProductsController.GetProducts">
+            <summary>
+            Rota para buscar todos os produtos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.ProductsController.GetProduct(System.String)">
+            <summary>
+            Rota para buscar um produto através do seu id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.ProductsController.PutProduct(System.String,ClickPC_Backend.Models.Product)">
+            <summary>
+            Rota para alterar um determinado produto
+            </summary>
+            <param name="id"></param>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.ProductsController.PostProduct(ClickPC_Backend.Models.Product)">
+            <summary>
+            Rota para adicionar um produto
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.ProductsController.DeleteProduct(System.String)">
+            <summary>
+            Rota para eliminar um produto através do id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.SuppliersController.GetSupplier(System.String)">
+            Obter fornecedor por id
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.SuppliersController.PutSupplier(System.String,ClickPC_Backend.Models.Supplier)">
+            Editar fornecedor
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.SuppliersController.PostSupplier(ClickPC_Backend.Models.Supplier)">
+            Adicionar fornecedor
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.SuppliersController.DeleteSupplier(System.String)">
+            Eliminar fornecedor
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.TransactionsController.GetTransactions">
+            <summary>
+            Obter transações
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.TransactionsController.GetTransaction(System.String)">
+            <summary>
+            Obter transação por ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.TransactionsController.PutTransaction(System.String,ClickPC_Backend.Models.Transaction)">
+            <summary>
+            Editar transações
+            </summary>
+            <param name="id"></param>
+            <param name="transaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.TransactionsController.PostTransaction(ClickPC_Backend.Models.Transaction)">
+            <summary>
+             Adicionar transação
+            </summary>
+            <param name="transaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickPC_Backend.Controllers.TransactionsController.DeleteTransaction(System.String)">
+            <summary>
+            Eliminar transação
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Account.Id">
+            <summary>
+            Modelo de Account segundo a Portaria (dados obrigatórios)
+            Registo na tabela de contas
+            </summary>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFile">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFile.Header">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFile.MasterFiles">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFile.GeneralLedgerEntries">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileHeader">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.AuditFileVersion">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.CompanyID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.TaxRegistrationNumber">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.TaxAccountingBasis">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.CompanyName">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.CompanyAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.FiscalYear">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.StartDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.EndDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.CurrencyCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.DateCreated">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.TaxEntity">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.ProductCompanyTaxID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.SoftwareCertificateNumber">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.ProductID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.ProductVersion">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.Telephone">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.Fax">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeader.Email">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress.AddressDetail">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress.City">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress.PostalCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress.Region">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileHeaderCompanyAddress.Country">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFiles">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFiles.GeneralLedgerAccounts">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFiles.Customer">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFiles.Supplier">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFiles.Product">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccounts">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccounts.TaxonomyReference">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccounts.Account">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.AccountID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.AccountDescription">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.OpeningDebitBalance">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.OpeningCreditBalance">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.ClosingDebitBalance">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.ClosingCreditBalance">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.GroupingCategory">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.GroupingCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.TaxonomyCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesGeneralLedgerAccountsAccount.TaxonomyCodeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesCustomer">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.CustomerID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.AccountID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.CustomerTaxID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.CompanyName">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.BillingAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomer.SelfBillingIndicator">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesCustomerBillingAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomerBillingAddress.AddressDetail">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomerBillingAddress.City">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomerBillingAddress.PostalCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesCustomerBillingAddress.Country">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesSupplier">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.SupplierID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.AccountID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.SupplierTaxID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.CompanyName">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.Contact">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.BillingAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.Telephone">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.TelephoneSpecified">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.Fax">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.FaxSpecified">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.Email">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplier.SelfBillingIndicator">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesProduct">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileMasterFilesSupplierBillingAddress">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplierBillingAddress.AddressDetail">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplierBillingAddress.City">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplierBillingAddress.PostalCode">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileMasterFilesSupplierBillingAddress.Country">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntries">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntries.NumberOfEntries">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntries.TotalDebit">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntries.TotalCredit">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntries.Journal">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournal">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournal.JournalID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournal.Description">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournal.Transaction">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.TransactionID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.Period">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.TransactionDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.SourceID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.Description">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.DocArchivalNumber">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.TransactionType">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.GLPostingDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.CustomerID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.CustomerIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.SupplierID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.SupplierIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransaction.Lines">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLines">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLines.Items">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine.RecordID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine.AccountID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine.SystemEntryDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine.Description">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesCreditLine.CreditAmount">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine.RecordID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine.AccountID">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine.SystemEntryDate">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine.Description">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.AuditFileGeneralLedgerEntriesJournalTransactionLinesDebitLine.DebitAmount">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.AuditFileSourceDocuments">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.SalesInvoices">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.Invoices">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.SpecialRegimes">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.ShipTo">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.ShipFrom">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.Address">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.WithholdingTax">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.Line">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.Tax">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.DocumentStatus">
+            <remarks/>
+        </member>
+        <member name="T:ClickPC_Backend.Models.DocumentTotals">
+            <remarks/>
+        </member>
+        <member name="P:ClickPC_Backend.Models.BilingAddress.Id">
+            <summary>
+            Modelo de BillingAddress segundo a Portaria (dados obrigatórios)
+            Morada de faturação
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Customer.Id">
+            <summary>
+            Modelo de Customer segundo a Portaria (dados obrigatórios)
+            Registo na tabela de clientes
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Invoice.Id">
+            <summary>
+            Modelo de Invoice segundo a Portaria (apenas dados obrigatórios necessários)
+            Registo na tabela para documento de venda
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.LineInvoice.Id">
+            <summary>
+            Modelo de Supplier segundo a Portaria (apenas dados obrigatórios necessários)
+            Linha de documento de venda
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Product.Id">
+            <summary>
+            Modelo de Produto segundo a Portaria (dados obrigatórios)
+            Registo na tabela de produto / serviços
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Supplier.Id">
+            <summary>
+            Modelo de Supplier segundo a Portaria (dados obrigatórios)
+            Registo na tabela de Fornecedores
+            </summary>
+        </member>
+        <member name="P:ClickPC_Backend.Models.Transaction.Id">
+            <summary>
+            Modelo de Transaction segundo a Portaria (dados obrigatórios)
+            Registo da transação
+            </summary>
+        </member>
+    </members>
+</doc>
